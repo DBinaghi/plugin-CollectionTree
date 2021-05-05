@@ -16,6 +16,14 @@
 	text-decoration: none;
 }
 
+#collection-tree li.active {
+	font-weight: bold;
+}
+
+#collection-tree li.active ul {
+	font-weight: normal;
+}
+
 #collection-tree li:before{
 	position: absolute;
 	display: block;
