@@ -29,26 +29,28 @@
 
 .collection-tree-icon {
 	display: block;
-	font-family: FontAwesome;
+	font-family: 'Font Awesome 5 Free';
 	font-size: 1.2em;	
+	font-weight: 900; 
 }
 
 .handle:before {
+	color: #FFD04E;
 	margin-right: .2em;
-	content: '\f0f6';
+	content: '\f07b';
 	float: left;
 }
 
 .collapsed:before {
-	margin-right: .2em;
 	color: #FFD04E;
-	content: "\f07b";
+	margin-right: .2em;
+	content: "\f65e";
 	cursor: pointer;
 }
 
 .expanded:before {
-	margin-right: .2em;
 	color: #FFD04E;
+	margin-right: .2em;
 	content: "\f07c";
 	cursor: pointer;
 }
