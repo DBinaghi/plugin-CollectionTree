@@ -32,8 +32,8 @@ class CollectionTreePlugin extends Omeka_Plugin_AbstractPlugin
         'public_items_search',
         'admin_collections_show',
         'public_collections_show',
-		'admin_head',
-		'public_head'
+        'admin_head',
+        'public_head'
     );
 
     /**
@@ -362,13 +362,13 @@ class CollectionTreePlugin extends Omeka_Plugin_AbstractPlugin
     protected function _appendToCollectionsShow($collection, $side)
     {
         $collectionTree = $this->_db->getTable('CollectionTree')->getCollectionTree($collection->id);
-		
-		if (count($collectionTree[0]['children']) > 0 || !(bool)get_Option('collection_tree_hide_orphans')) {
-			echo get_view()->partial(
-				'collections/collection-tree-list.php',
-				array('collection_tree' => $collectionTree, 'side' => $side)
-			);
-		}
+        
+        if (count($collectionTree[0]['children']) > 0 || !(bool)get_Option('collection_tree_hide_orphans')) {
+            echo get_view()->partial(
+                'collections/collection-tree-list.php',
+                array('collection_tree' => $collectionTree, 'side' => $side)
+            );
+        }
     }
 
     /**
@@ -376,10 +376,11 @@ class CollectionTreePlugin extends Omeka_Plugin_AbstractPlugin
      */
     public function hookPublicHead($args)
     {
-		if (get_option('collection_tree_treeview_style')) {
-			queue_css_file('file-explore');
-			queue_js_file('file-explore');
-		}
+        if (get_option('collection_tree_treeview_style')) {
+            queue_css_url('https://use.fontawesome.com/releases/v5.12.1/css/all.css');
+            queue_css_file('file-explore');
+            queue_js_file('file-explore');
+        }
     }
 
     /**
@@ -387,10 +388,11 @@ class CollectionTreePlugin extends Omeka_Plugin_AbstractPlugin
      */
     public function hookAdminHead($args)
     {
-		if (get_option('collection_tree_treeview_style')) {
-			queue_css_file('file-explore');
-			queue_js_file('file-explore');
-		}
+        if (get_option('collection_tree_treeview_style')) {
+            queue_css_url('https://use.fontawesome.com/releases/v5.12.1/css/all.css');
+            queue_css_file('file-explore');
+            queue_js_file('file-explore');
+        }
     }
 
     /**
