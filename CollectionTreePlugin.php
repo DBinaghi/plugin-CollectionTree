@@ -51,6 +51,7 @@ class CollectionTreePlugin extends Omeka_Plugin_AbstractPlugin
      * @var array Options and their default values.
      */
     protected $_options = array(
+        'collection_tree_title' => '',
         'collection_tree_alpha_order' => 0,
         'collection_tree_show_subcollections' => 0,
         'collection_tree_hide_orphans' => 0,
@@ -334,10 +335,10 @@ class CollectionTreePlugin extends Omeka_Plugin_AbstractPlugin
     protected function _itemsSearch($args)
     {
         return '<div class="field">
-            <div class="two columns alpha">
-                <label for="public">' . __('Expand to subcollections') . '</label>
+            <div class="alpha">
+                <label for="public">' . __('Expand search to subcollections') . '</label>
             </div>
-            <div class="five columns omega inputs">
+            <div class="omega inputs">
                 ' . $args['view']->formCheckbox('subcollections', null, array('checked' => (bool) get_option('collection_tree_search_descendant'))) . '
             </div>
         </div>';
