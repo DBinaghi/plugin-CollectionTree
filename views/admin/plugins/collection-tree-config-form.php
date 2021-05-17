@@ -2,6 +2,21 @@
 
 <div class="field">
     <div class="two columns alpha">
+        <?php echo $this->formLabel('collection_tree_public_title', __('Pulic side title')); ?>
+    </div>
+    <div class="inputs five columns omega">
+        <p class="explanation"><?php
+            echo __('The title for every Collection Tree section, Public side (if blank, will default to Collection Tree).');
+        ?></p>
+        <?php echo $this->formText(
+            'collection_tree_public_title', 
+            get_option('collection_tree_public_title')
+        ); ?>
+    </div>
+</div>
+
+<div class="field">
+    <div class="two columns alpha">
         <?php echo $this->formLabel('collection_tree_alpha_order', __('Order alphabetically')); ?>
     </div>
     <div class="inputs five columns omega">
