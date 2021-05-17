@@ -1,4 +1,6 @@
-<h2><?php echo __('Collection Tree'); ?></h2>
+<h2>
+<?php echo __(get_option('collection_tree_public_title') != '' && !is_admin_theme() ? get_option('collection_tree_public_title') : 'Collection Tree'); ?>
+</h2>
 <?php 
 	$treeview_expanded = get_option('collection_tree_treeview_expanded');
 	if ($treeview_expanded == 'everywhere' || ($side == 'public' && $treeview_expanded == 'public') || ($side == 'admin' && $treeview_expanded == 'admin')) {
