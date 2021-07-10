@@ -2,7 +2,7 @@
 
 <div class="field">
     <div class="two columns alpha">
-        <?php echo $this->formLabel('collection_tree_public_title', __('Pulic side title')); ?>
+        <?php echo $this->formLabel('collection_tree_public_title', __('Public side title')); ?>
     </div>
     <div class="inputs five columns omega">
         <p class="explanation"><?php
